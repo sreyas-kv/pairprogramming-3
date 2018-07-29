@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code with a new friend</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="/css/signup.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header role="header">
+        <h1>{ Pair Programming } </h1>
+        <h4>Code with friends</h4>
+    </header>
+    <main role="main">
+        <div class="container-2">
+            <form method="POST" action="/login" name="login-form" class="login-form">
+                <fieldset class="login-fieldset">
+                    <legend>Login</legend>
+                    Github User Name: <input type="text" id="login-username" class="login-username" required><br><br> Password: <input type="Password" id="login-pwd" class="login-pwd" required><br><br>
+                    <input type="submit" value="Login" name="login-button" id="login-button" class="login-button">
+                    <input type="button" value="Cancel" class="login-cancel">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <script src="/js/login.js "></script>
+    <!-- <script src="/js/signup.js "></script> -->
+</body>
+
+</html>

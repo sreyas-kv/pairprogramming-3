@@ -1,0 +1,78 @@
+h1,
+h4 {
+    text-align: center;
+}
+
+.container-main {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #a4a8ad;
+    padding: 10px;
+}
+
+.signup-submit {
+    display: inline;
+    /* height: 20px;
+    width: 100px; */
+    margin: -20px -50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.login {
+    display: inline;
+    /* height: 20px;
+    width: 100px; */
+    margin: -20px -50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.login-fieldset {
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+}
+
+.signup-fieldset {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.login-name {
+    margin-left: 15%;
+}
+
+.login-pwd {
+    margin-left: 16%;
+}
+
+
+/*Signup*/
+
+.first-name {
+    margin-left: 15%;
+}
+
+.last-name {
+    margin-left: 15.5%;
+}
+
+.location {
+    margin-left: 18.5%;
+}
+
+.user-name {
+    margin-left: 2.5%;
+}
+
+.signup-pwd {
+    margin-left: 17%;
+}
+
+.confirm-pwd {
+    margin-left: 3%;
+}

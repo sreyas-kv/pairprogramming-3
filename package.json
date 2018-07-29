@@ -1,0 +1,38 @@
+{
+    "name": "node-restaurants-app-mongoose",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon server.js",
+        "test": "mocha"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "Router": "^2.1.0",
+        "bcryptjs": "^2.4.0",
+        "body-parser": "^1.18.3",
+        "cookie-parser": "^1.4.3",
+        "dotenv": "^6.0.0",
+        "dotnet": "^1.1.4",
+        "express": "^4.16.3",
+        "express-session": "^1.15.6",
+        "jsonwebtoken": "^7.4.3",
+        "mongoose": "^5.0.13",
+        "mongoose-unique-validator": "^2.0.1",
+        "morgan": "^1.9.0",
+        "nodemon": "^1.18.3",
+        "passport": "^0.3.2",
+        "passport-jwt": "^2.2.1",
+        "passport-local": "^1.0.0",
+        "router": "^1.3.3"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "chai-http": "^4.0.0",
+        "faker": "^4.1.0",
+        "mocha": "^5.2.0"
+    }
+}
