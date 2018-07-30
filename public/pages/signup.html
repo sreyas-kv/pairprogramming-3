@@ -15,19 +15,18 @@
     </header>
     <main role="main">
         <div class="container-2">
-            <form method="POST" action="/signup" name="signup-form" class="signup-form" onsubmit="return validatePwd()">
+            <form method="POST" action="/signup" name="signup-form" class="signup-form">
                 <fieldset class="signup-fieldset">
                     <legend>Signup</legend>
                     First Name: <input type="text" id="first-name" name="firstName" class="first-name" required><br><br> Last Name: <input type="text" id="last-name" class="last-name" required><br><br> Location: <input type="text" id="location" class="location"
                         required><br><br> Github User Name:
-                    <input type="text" id="user-name" class="user-name" required><br><br> Password: <input type="Password" id="signup-pwd" class="signup-pwd" required><br><br> Confirm Password: <input type="password" id="confirm-pwd" class="confirm-pwd"
-                        required><br><br>
+                    <input type="text" id="user-name" class="user-name" required><br><br> Password: <input type="Password" id="signup-pwd" class="signup-pwd" required><br><br>
+                    <!-- Confirm Password: <input type="password" id="confirm-pwd" class="confirm-pwd"required><br><br> -->
                     <input type="submit" value="Signup" id="signup-button" class="signup-button">
                     <input type="button" value="Cancel" id="signup-cancel" class="signup-cancel">
                 </fieldset>
             </form>
             <div class="result-post"></div>
-            <a class="errMsg" href="/signup">signup</a>
         </div>
     </main>
     <script src="/js/login.js "></script>

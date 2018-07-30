@@ -1,25 +1,36 @@
+'use strict';
 const express = require('express');
-const router = express.Router();
+const passport = require('passport');
+const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
-const passport = require("passport");
+const config = require('../config');
+const router = express.Router();
 
-/* POST login */
-router.post('/login', function(req, res, next) {
-    passport.authenticate('local', { session: false }, (err, user, info) => {
-        console.log(user);
-        if (err || !user) {
-            return res.status(400).json({
-                message: 'Something is not right',
-                user: user
-            });
-        }
-        req.login(user, { session: false }, (err) => {
-            if (err) {
-                res.send(err);
-            }
-            const token = jwt.sign(user, 'my_jwt_secret');
-            return res.json({ user, token });
-        });
-    })(req, res);
+//----------------------POST Login authentication -------------------------------//
+const createAuthToken = function(user) {
+    return jwt.sign({ user }, config.JWT_SECRET, {
+        subject: user.username,
+        expiresIn: config.JWT_EXPIRY,
+        algorithm: 'HS256'
+    });
+};
+
+const localAuth = passport.authenticate('local', { session: false });
+router.use(bodyParser.json());
+//User enter githubUsername and pwd
+router.post('/', localAuth, (req, res) => {
+    const authToken = createAuthToken(req.user.serialize());
+    res.json({ authToken });
 });
+
+const jwtAuth = passport.authenticate('jwt', { session: false });
+
+//exchange valid JWT 
+router.post('/', jwtAuth, (req, res) => {
+    const authToken = createAuthToken(req.user);
+    res.json({ authToken });
+});
+
+
+
 module.exports = router;

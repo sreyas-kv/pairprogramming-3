@@ -6,7 +6,7 @@ function renderMap(data) {
         zoom: 10,
         center: from
     });
-    var defaultMarker = new google.maps.Marker({ position: new google.maps.LatLng(from.lat, from.lng), map: map, icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' });
+    // var defaultMarker = new google.maps.Marker({ position: new google.maps.LatLng(from.lat, from.lng), map: map, icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' });
     var markers = [];
     var contents = [];
     var infowindows = [];

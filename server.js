@@ -1,9 +1,10 @@
 "use strict";
-
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-
+const passport = require('passport');
+const router = express.Router();
 const bodyParser = require('body-parser');
 
 //Mongoose promise
@@ -12,28 +13,53 @@ mongoose.Promise = global.Promise;
 // config.js is where we control constants for entire
 // app like PORT and DATABASE_URL
 const { PORT, DATABASE_URL } = require("./config");
-const { Users } = require("./models");
+// const { Users } = require("./models");
+const { localStrategy, jwtStrategy } = require('./routes/strategies');
 
-//Setting the routes
-const auth = require('./routes/auth');
-// const login = require('./routes/login');
-const index = require('./routes/index');
-const signup = require('./routes/signup');
 
 const app = express();
+passport.use(localStrategy);
 app.use(express.json());
 app.use(bodyParser.json());
-require('./passport');
 
-
-// app.use('/auth', auth);
-app.use('/login', auth);
-app.use('/index', index);
-app.use('/signup', signup);
 
 
 //enable logs using morgan
 app.use(require('morgan')('common'));
+
+// CORS
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
+    if (req.method === 'OPTIONS') {
+        return res.send(204);
+    }
+    next();
+});
+
+passport.use(localStrategy);
+passport.use(jwtStrategy);
+
+//Setting the routes
+const auth = require('./routes/auth');
+const index = require('./routes/index');
+const signup = require('./routes/signup');
+const welcome = require('./routes/welcome');
+
+app.use('/login', auth);
+app.use('/index', index);
+app.use('/signup', signup);
+app.use('/welcome', welcome);
+
+const jwtAuth = passport.authenticate('jwt', { session: false });
+
+//Protected endpoint which needs a valid JWT to access it
+app.get('/protected', jwtAuth, (req, res) => {
+    return res.json({
+        data: 'pairprogramming'
+    });
+});
 
 //Set the static folder
 app.use(express.static('./public'));
