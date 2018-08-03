@@ -1,7 +1,38 @@
+//------------------------------- API GET request --------------------------------//
+let location_map, git_user;
+
+function ajaxGet() {
+    let myVal;
+    $.ajax({
+        type: "GET",
+        url: "/userdetails",
+        success: function(result) {
+            console.log("Success: ", result);
+            myVal = result;
+            console.log('myval', myVal);
+            for (let key in myVal) {
+                location_map = myVal[key].location;
+                git_user = myVal[key].githubUsername;
+                //                 const htmlDisplay = `
+                //    <div class="col-3">
+                //    <p>${myVal[key].firstName}</p> `;
+                //                 const outputElem = $('.user-details');
+                //                 outputElem.prop('hidden', false).append(htmlDisplay);
+            }
+        },
+        error: function(e) {
+            $("#user-details").html("<strong>Error</strong>");
+            console.log("ERROR: ", e);
+        }
+    });
+    return location_map, git_user;
+}
+
+
 ////******************************* GOOGLE RajaCode ********************************/
 
 function renderMap(data) {
-    const from = { lat: 37.09024, lng: -95.712891 }
+    const from = { lat: 32.7763, lng: -96.7969 }
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: from

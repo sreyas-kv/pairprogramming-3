@@ -3,6 +3,7 @@ const lastName = $('.last-name').val();
 const currentLocation = $('.location').val();
 const githubUsername = $('.user-name').val();
 
+const redirectUrl = '/hello'
 
 //Navigate to Login page
 $('.index-login').on('click', function() {
@@ -45,19 +46,29 @@ function loginUser(event) {
             data: JSON.stringify(loginInfo),
             url: '/login',
             dataType: 'JSON',
-            contentType: 'application/json'
+            contentType: 'application/json',
+
+            success: function(response) {
+                const jwtToken = response;
+                console.log('response: ', jwtToken);
+                window.location.href = 'hello';
+            },
+            error: function(err) {
+                console.log(err);
+            }
+
         }).done(function(response) {
             // Check for successful (blank) response
             if (response.msg === '') {
                 // Clear the form inputs
+                // window.location.href = response.redirect;
                 $('#login-form fieldset input').val('');
-                // Update the table
-                populateTable();
             } else {
                 // If something goes wrong, alert the error message that our service returned
                 //alert('Error: ' + response.msg);
-                console.log(response.msg);
+                // console.log(response.msg);
             }
+
         });
     } else {
         // If errorCount is more than 0, error out

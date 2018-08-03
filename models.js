@@ -16,28 +16,6 @@ const userDetailsSchema = mongoose.Schema({
     // confirmPassword: { type: String, required: true }
 });
 
-// //hash the password
-// userDetailsSchema.pre('save', function(next) {
-//     let user = this;
-//     bcrypt.hash(user.password, 10, function(err, hash) {
-//         if (err) {
-//             return next(err);
-//         }
-//         user.password = hash;
-//         next();
-//     })
-// });
-
-// hash the password thinkful code
-// userDetailsSchema.statics.hashPassword = function(password) {
-//     return bcrypt.hash(password, 10);
-// };
-
-// userDetailsSchema.methods.validatePassword = function(password) {
-//     return bcrypt.compare(password, this.password);
-// };
-
-
 userDetailsSchema.methods.serialize = function() {
     return {
         firstName: this.firstName || '',

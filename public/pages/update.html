@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code with a new friend</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="/css/signup.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header role="header">
+        <h1>{ Pair Programming } </h1>
+        <h4>Code with friends</h4>
+    </header>
+    <main role="main">
+        <div class="container-2">
+            <form method="POST" action="/update" name="update-form" class="update-form">
+                <fieldset class="update-fieldset">
+                    <legend>update User details</legend>
+                    First Name: <input type="text" id="first-name" name="firstName" class="first-name" required><br><br> Last Name: <input type="text" id="last-name" class="last-name" required><br><br> Location: <input type="text" id="location" class="location"
+                        required><br><br> Github User Name:<input type="text" id="user-name" class="user-name" required><br><br> Update Password: <input type="Password" id="signup-pwd" class="signup-pwd" required><br><br>
+                    <!-- Confirm Password: <input type="password" id="confirm-pwd" class="confirm-pwd"required><br><br> -->
+                    <input type="submit" value="update" id="update-button" class="update-button">
+                    <input type="button" value="Cancel" id="update-cancel" class="update-cancel">
+                </fieldset>
+            </form>
+            <div class="result-post"></div>
+        </div>
+    </main>
+    <script src="/js/login.js "></script>
+    <script src="/js/update.js "></script>
+</body>
+
+</html>

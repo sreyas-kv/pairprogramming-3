@@ -16,13 +16,10 @@ const { PORT, DATABASE_URL } = require("./config");
 // const { Users } = require("./models");
 const { localStrategy, jwtStrategy } = require('./routes/strategies');
 
-
 const app = express();
 passport.use(localStrategy);
 app.use(express.json());
 app.use(bodyParser.json());
-
-
 
 //enable logs using morgan
 app.use(require('morgan')('common'));
@@ -46,11 +43,15 @@ const auth = require('./routes/auth');
 const index = require('./routes/index');
 const signup = require('./routes/signup');
 const welcome = require('./routes/welcome');
+const userdetails = require('./routes/userdetails');
+const hello = require('./routes/hello');
 
 app.use('/login', auth);
 app.use('/index', index);
 app.use('/signup', signup);
 app.use('/welcome', welcome);
+app.use('/userdetails', userdetails);
+app.use('/hello', hello);
 
 const jwtAuth = passport.authenticate('jwt', { session: false });
 
