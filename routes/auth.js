@@ -26,9 +26,14 @@ router.use(bodyParser.json());
 //User enter githubUsername and pwd
 router.post('/', localAuth, (req, res) => {
     const authToken = createAuthToken(req.user.serialize());
-    res.json({ authToken });
-    // res.setHeader("Content-Type", "text/html");
-    // res.status(200).redirect('/hello');
+    // console.log('auth token: ', authToken);
+    if (authToken) {
+        res.json({ authToken });
+        // res.setHeader("Content-Type", "text/html");
+        // res.status(200).redirect('/hello');
+    } else {
+        res.send('Login failed');
+    }
 });
 
 const jwtAuth = passport.authenticate('jwt', { session: false });
@@ -36,7 +41,8 @@ const jwtAuth = passport.authenticate('jwt', { session: false });
 //exchange valid JWT 
 router.post('/', jwtAuth, (req, res) => {
     const authToken = createAuthToken(req.user);
-    // res.json({ authToken });
+    res.json({ authToken });
+    // console.log(authToken);
     // res.header('x-authorization', "Bearer " + authToken);
     // res.redirect('/hello');
 

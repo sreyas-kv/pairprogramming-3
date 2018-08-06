@@ -12,6 +12,10 @@ const localStrategy = new LocalStrategy((githubUsername, password, callback) => 
         .then(_user => {
             user = _user;
             if (!user) {
+                console.log('User: ', user);
+
+                // return callback(null, false, { message: 'bad password' });
+
                 return Promise.reject({
                     reason: 'LoginError',
                     message: 'Incorrect username or password'

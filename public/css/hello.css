@@ -2,25 +2,46 @@ body * {
     box-sizing: border-box;
 }
 
-.profile-parent {
-    margin-left: 50px;
-    margin-right: auto;
-    margin-top: 30px;
-    width: 800px;
-}
-
 .profile {
     display: inline-block;
 }
 
 .profile-div {
     width: 400px;
-    height: 150px;
+    height: 120px;
     padding-left: 20px;
+    margin-top: 10px;
 }
 
 img {
     width: 100px;
     height: 100px;
     border-radius: 4px;
+}
+
+.avtar-div {
+    margin-left: 10px;
+}
+
+.box_half {
+    width: 50%;
+    height: 135px;
+}
+
+.container-parent {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: auto;
+    width: 1200px;
+    border: 3px solid green;
+}
+
+.container {
+    display: inline-block;
+    border: 3px solid black;
+}
+
+.update_notes {
+    padding-left: 20px;
+    padding-top: 20px;
 }

@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
         users.forEach(function(user) {
             userMap[user._id] = user;
         });
-        console.log(userMap)
+        // console.log(userMap)
         res.send(userMap);
     });
 });

@@ -54,12 +54,13 @@ function loginUser(event) {
                 window.location.href = 'hello';
             },
             error: function(err) {
-                console.log(err);
+                console.log('Invalid ueser or pwd:', err);
+                alert('invalid username or password');
             }
 
         }).done(function(response) {
             // Check for successful (blank) response
-            if (response.msg === '') {
+            if (response.msg === 'Successfully loggedin') {
                 // Clear the form inputs
                 // window.location.href = response.redirect;
                 $('#login-form fieldset input').val('');

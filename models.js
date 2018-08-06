@@ -21,15 +21,17 @@ userDetailsSchema.methods.serialize = function() {
         firstName: this.firstName || '',
         lastName: this.lastName || '',
         location: this.location || '',
-        githubUsername: this.username || '',
+        githubUsername: this.username || ''
 
     };
 };
 
+//Validating the password
 userDetailsSchema.methods.validatePassword = function(password) {
     return bcrypt.compare(password, this.password);
 };
 
+//Hash the password
 userDetailsSchema.statics.hashPassword = function(password) {
     return bcrypt.hash(password, 10);
 };

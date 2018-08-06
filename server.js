@@ -45,6 +45,7 @@ const signup = require('./routes/signup');
 const welcome = require('./routes/welcome');
 const userdetails = require('./routes/userdetails');
 const hello = require('./routes/hello');
+const notes = require('./routes/notes');
 
 app.use('/login', auth);
 app.use('/index', index);
@@ -52,6 +53,7 @@ app.use('/signup', signup);
 app.use('/welcome', welcome);
 app.use('/userdetails', userdetails);
 app.use('/hello', hello);
+app.use('/notes', notes);
 
 const jwtAuth = passport.authenticate('jwt', { session: false });
 
