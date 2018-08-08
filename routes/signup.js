@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 });
 
 //--------------------- Post to register a new user-----------------------//
-
+//Check for required fields
 router.post('/', jsonParser, (req, res) => {
     const requiredFields = ['githubUsername', 'password'];
     const missingField = requiredFields.find(field => !(field in req.body));
@@ -24,6 +24,7 @@ router.post('/', jsonParser, (req, res) => {
         });
     }
 
+    //Checking if the  input values are string
     const stringFields = ['firstName', 'lastName', 'location', 'githubUsername', 'password'];
     const nonStringField = stringFields.find(
         field => field in req.body && typeof req.body[field] != 'string');
@@ -36,7 +37,7 @@ router.post('/', jsonParser, (req, res) => {
             location: nonStringField
         });
     }
-    // Trimming the user name and password
+    // Trimming the user name and password and need min chars
     const explicityTrimmedFields = ['githubUsername', 'password'];
     const nonTrimmedField = explicityTrimmedFields.find(
         field => req.body[field].trim() !== req.body[field]
@@ -80,7 +81,6 @@ router.post('/', jsonParser, (req, res) => {
             location: tooSmallField || tooLargeField
         });
     }
-
     let { firstName = '', lastName = '', location = '', githubUsername, password } = req.body;
     firstName = firstName.trim();
     lastName = lastName.trim();
@@ -121,39 +121,3 @@ router.post('/', jsonParser, (req, res) => {
 
 
 module.exports = router;
-
-
-
-
-
-
-
-
-// router.post('/', (req, res) => {
-//     console.log(req.body);
-//     const requiredFields = ["firstName", "lastName", "location", "githubUsername", "password", "confirmPassword"];
-//     for (let i = 0; i < requiredFields.length; i++) {
-//         const field = requiredFields[i];
-//         if (!(field in req.body)) {
-//             const message = `Missing \`${field}\` in request body`;
-//             console.error(message);
-//             return res.status(400).send(message);
-//         }
-//     }
-
-//     Users.create({
-//             firstName: req.body.firstName,
-//             lastName: req.body.lastName,
-//             location: req.body.location,
-//             githubUsername: req.body.githubUsername,
-//             password: req.body.password,
-//             confirmPassword: req.body.confirmPassword
-//         })
-//         .then(user => res.status(201).json(user))
-//         .catch(err => {
-//             console.error(err);
-//             res.status(500).json({ message: "Internal server error" });
-
-//         });
-//     // res.send(req.body);
-// });

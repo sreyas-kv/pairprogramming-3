@@ -11,17 +11,15 @@ router.get('/', (req, res) => {
         notes.forEach(function(note) {
             notesMap[notes._id] = note;
         });
-        console.log(notesMap);
         res.send(notesMap);
     });
 });
 
-//POST: Add notes
+// POST: Add notes
 // router.post('/', (req, res) => {
 //     const requiredFields = ['notes'];
 //     const missingField = requiredFields.find(field => !(field in req.body));
 //     if (missingField) {
-//         console.log(missingField);
 //         return res.status(422).json({
 //             code: 422,
 //             reason: 'ValidationError',
@@ -34,10 +32,10 @@ router.get('/', (req, res) => {
 //         })
 //         .then(notes => res.status(201).json(notes.serialize()))
 //         .catch(err => {
-//             console.log('Error while creating notes: ', err);
 //             res.status(500).json({ message: "Internal Server error" });
 //         });
 // });
+
 
 //PUT: Update existing notes  
 router.put('/:id', (req, res) => {
@@ -53,7 +51,7 @@ router.put('/:id', (req, res) => {
 
 //Delete Notes
 router.delete("/:id", (req, res) => {
-    Notes.findByIdAndRemove(req.params.notes, (err, todo) => {
+    Notes.findByIdAndRemove(req.params.notesId, (err, notes) => {
         if (err) return res.status(500).send(err);
         const response = {
             message: 'Notes deleted successfully',

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body * {
     box-sizing: border-box;
 }
@@ -23,25 +27,55 @@ img {
     margin-left: 10px;
 }
 
-.box_half {
-    width: 50%;
-    height: 135px;
-}
-
 .container-parent {
     margin-top: 20px;
     margin-left: 30px;
     margin-right: auto;
-    width: 1200px;
+    width: auto;
     border: 3px solid green;
+    float: left;
 }
 
-.container {
-    display: inline-block;
-    border: 3px solid black;
+.box_half {
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
+.github_users {
+    border: 3px solid blue;
+}
+
+.demo-form fieldset {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border: none;
 }
 
 .update_notes {
-    padding-left: 20px;
-    padding-top: 20px;
+    position: relative;
+    width: auto;
+    border: 3px solid tomato;
+    display: inline-block;
+}
+
+.notes-fieldset {
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0;
+    margin-bottom: 0;
+    border: none;
+    width: auto;
+}
+
+.notes-text {
+    width: 450px;
+    padding-left: 10px
+}
+
+.notes {
+    padding-left: 10px;
 }

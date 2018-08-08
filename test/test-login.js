@@ -16,14 +16,33 @@ describe('Pairprogramming', function() {
         return closeServer();
     });
 
-    it("should Login with POST", function() {
+    it('should display login.html page on GET request', function() {
+        return chai.request(app)
+            .get('/login')
+            .then(function(res) {
+                expect(res).to.be.html;
+            });
+    });
+
+    it('should Login with POST request', function() {
         const loginDetails = { githubUsername: 'sreyas-kv', password: 'sreyas-kv123' };
         return chai.request(app)
             .post('/login')
             .send(loginDetails)
             .then(function(res) {
-                // console.log('test res: ', res);
                 expect(res).to.be.a('object');
             });
     });
+
+    it('should show error for incorrect username password on POST request', function() {
+        const loginDetails = { githubUsername: 'sreyas-v', password: 'sreyakv123' };
+        return chai.request(app)
+            .post('/login')
+            .send(loginDetails)
+            .then(function(res) {
+                expect(res).to.be.a('Object');
+            });
+    });
+
+
 });
