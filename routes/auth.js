@@ -28,10 +28,12 @@ router.post('/', localAuth, (req, res) => {
     const authToken = createAuthToken(req.user.serialize());
     // console.log('auth token: ', authToken);
     if (authToken) {
-        res.json({ authToken });
         // res.setHeader("Content-Type", "text/html");
+        res.json({ authToken });
+
         // res.status(200).redirect('/hello');
     } else {
+        console.log('test');
         res.send('Login failed');
     }
 });

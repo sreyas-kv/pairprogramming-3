@@ -25,4 +25,12 @@ describe('Pairprogramming', function() {
                 expect(res).to.be.html;
             });
     });
+    it("should display 404 for bad route on GET", function() {
+        return chai
+            .request(app)
+            .get('/goodbye')
+            .then(function(res) {
+                expect(res).to.be.status(404);
+            });
+    });
 });

@@ -35,7 +35,10 @@ function addUser(event) {
             data: JSON.stringify(userInfo),
             url: '/signup',
             dataType: 'JSON',
-            contentType: 'application/json'
+            contentType: 'application/json',
+            success: function() {
+                window.location.href = 'hello';
+            }
         }).done(function(response) {
             // Check for successful (blank) response
             if (response.msg === '') {
