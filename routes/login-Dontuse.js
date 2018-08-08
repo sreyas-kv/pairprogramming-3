@@ -4,14 +4,13 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const passport = require("passport");
 
+const { DATABASE_TEST_URL } = require("../config");
 const { PORT, DATABASE_URL } = require("../config");
 const { Users } = require("../models");
 
 router.get('/', (req, res) => {
     res.sendFile('/pages/login.html', { root: './public' });
 });
-
-
 
 // //***Login POST Request using bcrypt
 

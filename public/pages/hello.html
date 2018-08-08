@@ -14,23 +14,20 @@
         <h4>Code with friends</h4>
     </header>
     <main role="main">
-        <div class="container sub-container error" name="user-details"></div>
+        <div class="container-1 sub-container error" name="user-details"></div>
         <div class="container-parent">
-
             <div class="centered">
-                <div class="container box_half github_users" name="git-users">
-                </div>
-            </div>
-            <div class="centered">
-                <div class="container box_half update_locaiton" name="update_notes">
+                <div class="container box_half github_users" name="git-users"></div>
+                <div class="container box_half update_notes" name="update_notes">
                     <fieldset class="notes-fieldset">
-                        <form class="notes-form" name="notes-form">
+                        <form class="notes-form" name="notes-form" role="notes form">
                             <input type="text" id="notes" class="notes">
                             <!-- <input type="submit" value="Add Notes" id="add_notes" class="add_notes"> -->
                             <input type="submit" value="Update Notes" id="update_notes" class="update_notes">
                             <input type="submit" value="Delete Notes" id="delete_notes" class="delete_notes">
                         </form>
-                        <div class="notes"></div>
+                    </fieldset>
+                    <div class="notes"></div>
                 </div>
             </div>
         </div>
