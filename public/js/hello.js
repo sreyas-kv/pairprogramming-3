@@ -93,9 +93,7 @@ $('.notes-form').submit(function putNote() {
             url: `/notes/${id}`,
             data: JSON.stringify(addNote),
             contentType: 'application/json',
-            success: function(notes) {
-                console.log("Success: ", notes);
-            },
+            success: function(notes) {},
             error: function(e) {
                 $(".sub-container").html("<strong>Error</strong>");
             }
@@ -110,9 +108,7 @@ $('#delete_notes').submit(function deleteNote() {
     $.ajax({
         type: "DELETE",
         url: `/notes/${id}`,
-        success: function() {
-            console.log('Deleted operation successful');
-        },
+        success: function() {},
     });
 });
 

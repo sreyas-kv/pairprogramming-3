@@ -15,10 +15,8 @@ h4 {
     width: 50%;
     padding: 10px;
     height: auto;
-    border: 3px solid #576574;
     font-size: 18px;
     color: #576574;
-    border: 3px solid blue;
 }
 
 .login-button,
@@ -94,13 +92,6 @@ input[type=password] {
     clear: both;
 }
 
-
-/* .login-col-1 {
-    float: left;
-    padding-left: 1.04166666%;
-    padding-right: 1.04166666%;
-} */
-
 .login-fieldset {
     float: left;
     padding-left: 1.04166666%;
@@ -110,11 +101,6 @@ input[type=password] {
 
 /* Mobile Defaults */
 
-
-/* .login-col-1 {
-    width: 100%;
-} */
-
 .login-fieldset {
     width: 100%;
 }
@@ -123,9 +109,6 @@ input[type=password] {
 /* Non Mobile Grid */
 
 @media only screen and (min-width: 640px) {
-    /* .login-col-1 {
-        width: auto;
-    } */
     .login-fieldset {
         width: auto;
     }

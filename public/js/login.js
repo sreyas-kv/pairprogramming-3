@@ -38,7 +38,6 @@ function loginUser(event) {
             username: $('#login-username').val(),
             password: $('#login-pwd').val()
         }
-        console.log(loginInfo);
 
         //AJAX to post the object to our adduser service
         $.ajax({
@@ -50,26 +49,17 @@ function loginUser(event) {
 
             success: function(response) {
                 const jwtToken = response;
-                console.log('response: ', jwtToken);
                 window.location.href = 'hello';
             },
             error: function(err) {
-                console.log('Invalid ueser or pwd:', err);
                 alert('invalid username or password');
             }
 
         }).done(function(response) {
             // Check for successful (blank) response
             if (response.msg === 'Successfully loggedin') {
-                // Clear the form inputs
-                // window.location.href = response.redirect;
                 $('#login-form fieldset input').val('');
-            } else {
-                // If something goes wrong, alert the error message that our service returned
-                //alert('Error: ' + response.msg);
-                // console.log(response.msg);
             }
-
         });
     } else {
         // If errorCount is more than 0, error out

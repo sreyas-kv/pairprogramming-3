@@ -25,9 +25,7 @@ function addUser(event) {
             location: $('#location').val(),
             githubUsername: $('#user-name').val(),
             password: $('#signup-pwd').val(),
-            // confirmPassword: $('#confirm-pwd').val()
         }
-        console.log(userInfo);
 
         //AJAX to post the object to our adduser service
         $.ajax({
@@ -42,7 +40,6 @@ function addUser(event) {
         }).done(function(response) {
             // Check for successful (blank) response
             if (response.msg === '') {
-                console.log('signup success');
                 // Clear the form inputs
                 $('#signup-form fieldset input').val('');
                 // Update the table
@@ -50,7 +47,6 @@ function addUser(event) {
             } else {
                 // If something goes wrong, alert the error message that our service returned
 
-                console.log(response.msg);
             }
         });
     } else {

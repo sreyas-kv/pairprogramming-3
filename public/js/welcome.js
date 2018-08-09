@@ -7,9 +7,7 @@ function ajaxGet() {
         type: "GET",
         url: "/userdetails",
         success: function(result) {
-            console.log("Success: ", result);
             myVal = result;
-            console.log('myval', myVal);
             for (let key in myVal) {
                 location_map = myVal[key].location;
                 git_user = myVal[key].githubUsername;
@@ -22,7 +20,6 @@ function ajaxGet() {
         },
         error: function(e) {
             $("#user-details").html("<strong>Error</strong>");
-            console.log("ERROR: ", e);
         }
     });
     return location_map, git_user;
