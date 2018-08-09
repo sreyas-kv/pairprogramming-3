@@ -1,9 +1,17 @@
 * {
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    background: #1dd1a1;
 }
 
 body * {
     box-sizing: border-box;
+}
+
+h1,
+h4 {
+    text-align: center;
+    color: #576574;
 }
 
 .profile {
@@ -32,7 +40,6 @@ img {
     margin-left: 30px;
     margin-right: auto;
     width: auto;
-    border: 3px solid green;
     float: left;
 }
 
@@ -40,10 +47,6 @@ img {
     width: 50%;
     height: auto;
     float: left;
-}
-
-.github_users {
-    border: 3px solid blue;
 }
 
 .demo-form fieldset {
@@ -57,7 +60,6 @@ img {
 .update_notes {
     position: relative;
     width: auto;
-    border: 3px solid tomato;
     display: inline-block;
 }
 
@@ -69,6 +71,12 @@ img {
     margin-bottom: 0;
     border: none;
     width: auto;
+    color: #576574;
+}
+
+legend {
+    font-size: 20px;
+    color: #576574;
 }
 
 .notes-text {
@@ -78,4 +86,70 @@ img {
 
 .notes {
     padding-left: 10px;
+    font-size: 20px;
+    color: #576574;
+}
+
+.update_notes_button,
+.delete_notes {
+    margin: auto;
+    height: 40px;
+    width: 140px;
+    text-align: center;
+    font-size: 18px;
+    color: #576574;
+    border: 2px solid #576574;
+}
+
+.update_notes_button {
+    margin-left: 10%;
+    margin-right: 20px;
+}
+
+input[type=text] {
+    color: #576574;
+    font-size: 18px;
+    border: 2px solid #576574;
+}
+
+
+/* Responsive Deisgn */
+
+.container-parent {
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+.container-parent::before,
+.container-parent::after {
+    display: table;
+    content: '';
+}
+
+.container-parent::after {
+    clear: both;
+}
+
+.centered {
+    float: left;
+    padding-left: 1.04166666%;
+    padding-right: 1.04166666%;
+}
+
+
+/* Mobile Defaults */
+
+.centered {
+    width: 100%;
+}
+
+
+/* Non Mobile Grid */
+
+@media only screen and (min-width: 640px) {
+    .centered {
+        width: auto;
+    }
 }

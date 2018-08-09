@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Code with a new friend</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <link href="/css/signup.css" rel="stylesheet" type="text/css">
+    <link href="/css/login.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 <body>
@@ -14,19 +15,23 @@
         <h4>Code with friends</h4>
     </header>
     <main role="main">
-        <div class="container-2">
-            <form method="POST" action="/login" name="login-form" class="login-form">
+        <div class="container-parent-login">
+            <div class="login-col-1">
                 <fieldset class="login-fieldset">
                     <legend>Login</legend>
-                    Github User Name: <input type="text" id="login-username" class="login-username" required><br><br> Password: <input type="Password" id="login-pwd" class="login-pwd" required><br><br>
-                    <input type="submit" value="Login" name="login-button" id="login-button" class="login-button">
-                    <input type="button" value="Cancel" class="login-cancel">
+                    <form method="POST" action="/login" name="login-form" class="login-form">
+                        <label for="username">Github User Name: </label>
+                        <input type="text" id="login-username" class="login-username" required><br><br>
+                        <label for="password"> Password:</label>
+                        <input type="Password" id="login-pwd" class="login-pwd" required><br><br>
+                        <input type="submit" value="Login" name="login-button" id="login-button" class="login-button">
+                        <input type="button" value="Cancel" class="login-cancel">
+                    </form>
                 </fieldset>
-            </form>
+            </div>
         </div>
     </main>
     <script src="/js/login.js "></script>
-    <!-- <script src="/js/signup.js "></script> -->
 </body>
 
 </html>

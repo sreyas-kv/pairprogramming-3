@@ -6,6 +6,7 @@
     <title>Code with a new friend</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href="/css/signup.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 <body>
@@ -14,18 +15,27 @@
         <h4>Code with friends</h4>
     </header>
     <main role="main">
-        <div class="container-2">
-            <form method="POST" action="/signup" name="signup-form" class="signup-form">
+        <div class="container-parent-signup">
+            <div class="signup-col">
                 <fieldset class="signup-fieldset">
                     <legend>Signup</legend>
-                    First Name: <input type="text" id="first-name" name="firstName" class="first-name" required><br><br> Last Name: <input type="text" id="last-name" class="last-name" required><br><br> Location: <input type="text" id="location" class="location"
-                        required><br><br> Github User Name:
-                    <input type="text" id="user-name" class="user-name" required><br><br> Password: <input type="Password" id="signup-pwd" class="signup-pwd" required><br><br>
-                    <input type="submit" value="Signup" id="signup-button" class="signup-button">
-                    <input type="button" value="Cancel" id="signup-cancel" class="signup-cancel">
+                    <form method="POST" action="/signup" name="signup-form" class="signup-form">
+                        <label for="firstName"> First Name:</label>
+                        <input type="text" id="first-name" name="firstName" class="first-name" required><br><br>
+                        <label for="lastName"> Last Name: </label>
+                        <input type="text" id="last-name" class="last-name" required><br><br>
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" class="location" required><br><br>
+                        <label for="githubUsernamer">Github User Name:</label>
+                        <input type="text" id="user-name" class="user-name" required><br><br>
+                        <label for="password">Password: </label>
+                        <input type="Password" id="signup-pwd" class="signup-pwd" required><br><br>
+                        <input type="submit" value="Signup" id="signup-button" class="signup-button">
+                        <input type="button" value="Cancel" id="signup-cancel" class="signup-cancel">
+                    </form>
                 </fieldset>
-            </form>
-            <div class="result-post"></div>
+                <div class="result-post"></div>
+            </div>
         </div>
     </main>
     <script src="/js/login.js "></script>

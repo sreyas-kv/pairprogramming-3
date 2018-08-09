@@ -1,78 +1,132 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    background: #1dd1a1;
+}
+
 h1,
 h4 {
     text-align: center;
+    color: #576574;
 }
 
-.container-main {
+.container-parent-login {
     margin: auto;
     width: 50%;
-    border: 3px solid #a4a8ad;
     padding: 10px;
+    height: auto;
+    border: 3px solid #576574;
+    font-size: 18px;
+    color: #576574;
+    border: 3px solid blue;
 }
 
-.signup-submit {
-    display: inline;
-    /* height: 20px;
-    width: 100px; */
-    margin: -20px -50px;
-    position: relative;
-    top: 50%;
-    left: 50%;
+.login-button,
+.login-cancel {
+    margin: auto;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    font-size: 18px;
+    color: #576574;
+    border: 2px solid #576574;
 }
 
-.login {
-    display: inline;
-    /* height: 20px;
-    width: 100px; */
-    margin: -20px -50px;
-    position: relative;
-    top: 50%;
-    left: 50%;
+.login-button {
+    margin-left: 30%;
+    margin-right: 20px;
+}
+
+legend {
+    color: #576574;
+    font-size: 20px
 }
 
 .login-fieldset {
-    margin: auto;
-    width: 20%;
-    padding: 10px;
+    width: 500px;
+    color: #576574;
+    border-color: #576574;
+    border-style: solid;
 }
 
-.signup-fieldset {
-    margin: auto;
-    width: 30%;
-    padding: 10px;
+label {
+    padding-left: 10px;
+    display: inline-block;
 }
 
-.login-name {
-    margin-left: 15%;
+input[type=text] {
+    color: #576574;
+    font-size: 18px;
+    border: 2px solid #576574;
+}
+
+input[type=password] {
+    color: #576574;
+    font-size: 18px;
+    border: 2px solid #576574;
+}
+
+.login-username {
+    margin-left: 22px;
 }
 
 .login-pwd {
-    margin-left: 16%;
+    margin-left: 90px;
 }
 
 
-/*Signup*/
+/* Responsive design */
 
-.first-name {
-    margin-left: 15%;
+.container-parent-login {
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
 }
 
-.last-name {
-    margin-left: 15.5%;
+.container-parent-login::before,
+.container-parent-login::after {
+    display: table;
+    content: '';
 }
 
-.location {
-    margin-left: 18.5%;
+.container-parent-login::after {
+    clear: both;
 }
 
-.user-name {
-    margin-left: 2.5%;
+
+/* .login-col-1 {
+    float: left;
+    padding-left: 1.04166666%;
+    padding-right: 1.04166666%;
+} */
+
+.login-fieldset {
+    float: left;
+    padding-left: 1.04166666%;
+    padding-right: 1.04166666%;
 }
 
-.signup-pwd {
-    margin-left: 17%;
+
+/* Mobile Defaults */
+
+
+/* .login-col-1 {
+    width: 100%;
+} */
+
+.login-fieldset {
+    width: 100%;
 }
 
-.confirm-pwd {
-    margin-left: 3%;
+
+/* Non Mobile Grid */
+
+@media only screen and (min-width: 640px) {
+    /* .login-col-1 {
+        width: auto;
+    } */
+    .login-fieldset {
+        width: auto;
+    }
 }
