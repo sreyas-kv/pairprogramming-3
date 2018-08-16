@@ -18,7 +18,7 @@
         <div class="container-parent-signup">
             <div class="signup-col">
                 <fieldset class="signup-fieldset">
-                    <legend>Signup</legend>
+                    <span class="signup-signup">Signup</span>
                     <form method="POST" action="/signup" name="signup-form" class="signup-form">
                         <label for="firstName"> First Name:</label>
                         <input type="text" id="first-name" name="firstName" class="first-name" required><br><br>
@@ -30,8 +30,10 @@
                         <input type="text" id="user-name" class="user-name" required><br><br>
                         <label for="password">Password: </label>
                         <input type="Password" id="signup-pwd" class="signup-pwd" required><br><br>
+                        <span class="span-button">
                         <input type="submit" value="Signup" id="signup-button" class="signup-button">
                         <input type="button" value="Cancel" id="signup-cancel" class="signup-cancel">
+                    </span>
                     </form>
                 </fieldset>
                 <div class="result-post"></div>

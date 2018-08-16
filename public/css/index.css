@@ -1,28 +1,46 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    background: #1dd1a1;
+    background: url('https://images.fabric.com/images/693/693/0339954.jpg');
+    background-size: cover;
 }
 
-h1,
-h4 {
+header {
+    margin-top: 50px;
     text-align: center;
-    color: #576574;
+    color: #EEF5DB;
 }
 
-h3,
-p {
-    padding-left: 20%;
+main {
+    width: 350px;
+    margin: 0 auto;
 }
 
-.container-parent {
+.col-1 {
     margin: auto;
-    width: 50%;
+    width: 400px;
     padding: 10px;
     height: auto;
-    border: 3px solid #576574;
-    font-size: 18px;
-    color: #576574;
+    border: 3px solid #EEF5DB;
+    font-size: 20px;
+    color: #EEF5DB;
+    border-radius: 12px;
+}
+
+p {
+    width: 250px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+h3 {
+    width: 350px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.index-span {
+    display: inline-block;
+    width: 350px;
+    text-align: center;
 }
 
 .index-signup,
@@ -32,17 +50,15 @@ p {
     width: 80px;
     text-align: center;
     font-size: 18px;
-    color: #576574;
-    border: 2px solid #576574;
+    color: #EEF5DB;
+    border: 2px solid #EEF5DB;
+    border-radius: 6px;
+    background: #37392E;
+    width: 120px;
 }
 
-.index-signup {
-    margin-left: 30%;
-    margin-right: 20px;
-}
 
-
-/* Responsive Deisgn */
+/* Responsive deisgn */
 
 .container-parent {
     max-width: 1000px;
@@ -68,17 +84,11 @@ p {
 }
 
 
-/* Mobile Defaults */
-
-.col-1 {
-    width: 100%;
-}
-
-
 /* Non Mobile Grid */
 
-@media only screen and (min-width: 640px) {
+@media only screen and (max-width: 640px) {
     .col-1 {
         width: auto;
+        ;
     }
 }
