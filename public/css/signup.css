@@ -1,13 +1,15 @@
 * {
     /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
-    background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=962fdbcc8d5031658056ef47fded4b7b&auto=format&fit=crop&w=1650&q=80');
+    /* background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=962fdbcc8d5031658056ef47fded4b7b&auto=format&fit=crop&w=1650&q=80'); */
+    background-color: #CCE3DE;
     background-size: cover;
+    font-family: 'Unica One', cursive;
 }
 
 header {
     margin-top: 50px;
     text-align: center;
-    color: #FFFFFF;
+    color: #3d59528c;
 }
 
 main {
@@ -19,57 +21,57 @@ label {
     width: 150px;
     display: inline-block;
     margin-left: 10px;
-    background: #37392E;
+    background: #d6d2c7;
 }
 
 .signup-form {
     margin: 10px;
-    background: #37392E;
+    background: #d6d2c7;
 }
 
 .span-button {
     display: inline-block;
     width: 282px;
     text-align: right;
-    background: #37392E;
+    background: #d6d2c7;
 }
 
 input[type=text],
 input[type=password],
 .signup-signup {
-    background: #19647E;
-    color: #FFFFFF;
+    background: #F2EFEA;
+    color: #3d59528c;
     font-size: 18px;
     border-radius: 3px;
 }
 
 input[type=text],
 input[type=password] {
-    border: 2px solid #E56634;
+    border: 2px solid #3d59528c;
 }
 
 .signup-signup {
-    background: #37392E;
+    background: #d6d2c7;
     text-align: center;
     margin-left: 50%;
     font-size: 25px;
 }
 
 fieldset {
-    background: #37392E;
-    color: #FFFFFF;
+    background: #d6d2c7;
+    color: #3d59528c;
     font-size: 18px;
     border-radius: 12px;
-    border: 2px solid #E56634;
+    border: 2px solid #3d59528c;
 }
 
 .signup-button,
 .signup-cancel {
     text-align: center;
     font-size: 18px;
-    border: 2px solid #E56634;
-    color: #FFFFFF;
-    background: #19647E;
+    border: 2px solid #3d59528c;
+    color: #3d59528c;
+    background: #F2EFEA;
     border-radius: 12px;
     padding: 5px;
     width: 120px;

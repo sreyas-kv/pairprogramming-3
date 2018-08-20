@@ -42,7 +42,7 @@ function renderUserDetails(info) {
         <div class="profile profile-div details">   
         <p>${name}</p>
         <p>${location}</p>
-        <a href=${htmlUrl}>View ${userName}'s Github profile</a>
+        <a href=${htmlUrl}>${userName}'s Github profile</a>
         </div>
         </div>
         `
@@ -117,7 +117,7 @@ function renderNotes(existingNotes) {
     const notes = existingNotes;
     const notesRender = `
     <div class="notes-parent">
-    <p>${notes}</p>
+    <p class="notes-added">${notes}</p>
     `
     const notesOutputEelement = $('.notes');
     notesOutputEelement.prop('hidden', false).append(notesRender);
