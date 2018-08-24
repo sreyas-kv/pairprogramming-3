@@ -29,7 +29,8 @@ function getGithubUser(userName, callback) {
 
 function renderUserDetails(info) {
     const name = info.name;
-    const location = info.location;
+    // const location = info.location;
+    const location = info.location ? info.location : 'N/A';
     const userName = info.login;
     const htmlUrl = info.html_url;
     const avatar = info.avatar_url;

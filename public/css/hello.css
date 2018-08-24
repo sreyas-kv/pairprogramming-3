@@ -17,7 +17,6 @@ h4 {
     border: solid 3px #3d59528c;
     width: 400px;
     margin-bottom: 10px;
-    /* float: left; */
     background-color: #FCE8CA;
 }
 
@@ -139,3 +138,10 @@ form {
     max-height: 200px;
     overflow-y: scroll;
 }
+
+
+/* 
+.test {
+    max-width: 95%;
+    text-align: center;
+} */
