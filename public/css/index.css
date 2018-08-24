@@ -29,6 +29,7 @@ main {
 }
 
 p {
+    font-family: 'Quattrocento Sans', sans-serif;
     width: 250px;
     display: inline-block;
     margin-left: 10px;
@@ -36,7 +37,8 @@ p {
 }
 
 h3 {
-    width: 350px;
+    font-family: 'Quattrocento Sans', sans-serif;
+    width: 380px;
     display: inline-block;
     margin-left: 10px;
     background: #d6d2c7;

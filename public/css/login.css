@@ -74,8 +74,25 @@ fieldset {
     border-radius: 12px;
     padding: 5px;
     width: 120px;
+    margin-top: 15px;
 }
 
 .login-cancel {
     margin-left: 10px;
+}
+
+
+/* Demo account */
+
+.demo-account p {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 15px;
+    background: #F2EFEA;
+}
+
+.demo-pwd,
+.demo-user {
+    font-family: 'Quattrocento Sans', sans-serif;
+    display: inline-block;
+    float: right;
 }

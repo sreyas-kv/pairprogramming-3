@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href="/css/login.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
 </head>
 
 <body>
@@ -22,9 +22,9 @@
                     <span class="login-login">Login</span>
                     <form method="POST" action="/login" name="login-form" class="login-form">
                         <label for="username">Github User Name: </label>
-                        <input type="text" id="login-username" class="login-username" required><br><br>
+                        <input type="text" id="login-username" class="login-username" required> <label for="demo-user" class="demo-user">sreyas-kv</label><br><br>
                         <label for="password"> Password:</label>
-                        <input type="Password" id="login-pwd" class="login-pwd" required><br><br>
+                        <input type="Password" id="login-pwd" class="login-pwd" required><label for="demo-pwd" class="demo-pwd">sreyas-kv123</label><br><br>
                         <span class="span-login">
                         <input type="submit" value="Login" name="login-button" id="login-button" class="login-button">
                         <input type="button" value="Cancel" class="login-cancel">
@@ -32,6 +32,11 @@
                     </form>
                 </fieldset>
             </div>
+            <!-- <div class="demo-account">
+                <p>Demo Account:</p>
+                <p>user name: sreyas-kv</p>
+                <p>password: sreyas-kv123</p>
+            </div> -->
         </div>
     </main>
     <script src="/js/login.js "></script>
